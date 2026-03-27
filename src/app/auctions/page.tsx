@@ -10,7 +10,7 @@ export default function AuctionsPage() {
 
   return (
     <div className="space-y-8">
-      <section>
+      <section className="rounded-3xl border border-zinc-200/80 bg-white/80 p-6 shadow-sm">
         <h1 className="text-3xl font-bold text-zinc-900">Live Auctions</h1>
         <p className="mt-2 text-sm text-zinc-600">
           Join active bids, track countdowns, and win unique gemstones before

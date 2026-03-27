@@ -23,13 +23,13 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
   return (
     <div className="space-y-10">
-      <div className="grid gap-6 rounded-3xl border border-zinc-200 bg-white p-5 shadow-sm md:grid-cols-2">
+      <div className="grid gap-6 rounded-3xl border border-zinc-200/80 bg-white/90 p-5 shadow-sm md:grid-cols-2">
         <Image
           src={listing.image}
           alt={listing.title}
           width={900}
           height={700}
-          className="h-full min-h-72 w-full rounded-2xl object-cover"
+          className="h-full min-h-72 w-full rounded-2xl object-cover shadow-lg"
         />
 
         <section className="space-y-5">
@@ -63,7 +63,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
             </div>
           </div>
 
-          <div className="rounded-xl border border-amber-200 bg-amber-50 p-4">
+          <div className="rounded-2xl border border-amber-200 bg-gradient-to-r from-amber-50 to-amber-100 p-4">
             <p className="text-sm text-zinc-600">Current Value</p>
             <p className="text-2xl font-bold text-zinc-900">
               {listing.currentBid ? `$${listing.currentBid}` : `$${listing.price}`}
@@ -71,13 +71,13 @@ export default async function ProductPage({ params }: ProductPageProps) {
             <div className="mt-3 flex flex-wrap gap-3">
               <button
                 type="button"
-                className="rounded-full bg-zinc-900 px-4 py-2 text-sm font-semibold text-white"
+                className="rounded-full bg-zinc-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-amber-600"
               >
                 Place Bid
               </button>
               <button
                 type="button"
-                className="rounded-full border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900"
+                className="rounded-full border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 transition hover:border-amber-500 hover:text-amber-700"
               >
                 Buy Now
               </button>
@@ -85,7 +85,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
           </div>
 
           {seller ? (
-            <div className="rounded-xl border border-zinc-200 p-4 text-sm">
+            <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4 text-sm">
               <p className="font-semibold text-zinc-900">{seller.name}</p>
               <p className="text-zinc-600">
                 Rating {seller.rating} ({seller.reviews} reviews)

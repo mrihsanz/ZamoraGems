@@ -23,25 +23,25 @@ export function ProductCard({ listing, showAuctionMeta = true }: ProductCardProp
       : undefined;
 
   return (
-    <article className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm transition hover:shadow-md">
+    <article className="group overflow-hidden rounded-3xl border border-zinc-200/80 bg-white/95 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
       <Link href={`/products/${listing.slug}`} className="block">
         <Image
           src={listing.image}
           alt={listing.title}
           width={640}
           height={360}
-          className="h-44 w-full object-cover"
+          className="h-48 w-full object-cover transition duration-500 group-hover:scale-105"
         />
       </Link>
-      <div className="space-y-3 p-4">
+      <div className="space-y-3 p-5">
         <div className="flex items-start justify-between gap-2">
           <Link
             href={`/products/${listing.slug}`}
-            className="text-sm font-semibold text-zinc-900 hover:text-amber-700"
+            className="line-clamp-2 text-sm font-semibold text-zinc-900 hover:text-amber-700"
           >
             {listing.title}
           </Link>
-          <span className="rounded-full bg-zinc-100 px-2 py-1 text-xs text-zinc-600">
+          <span className="rounded-full border border-zinc-200 bg-zinc-50 px-2 py-1 text-xs text-zinc-600">
             {listing.category}
           </span>
         </div>
@@ -74,6 +74,12 @@ export function ProductCard({ listing, showAuctionMeta = true }: ProductCardProp
             </span>
           ) : null}
         </div>
+        <Link
+          href={`/products/${listing.slug}`}
+          className="inline-flex rounded-full bg-zinc-900 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-amber-600"
+        >
+          View Details
+        </Link>
       </div>
     </article>
   );

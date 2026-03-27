@@ -29,9 +29,11 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-zinc-50 text-zinc-900">
+      <body className="relative min-h-full overflow-x-hidden text-zinc-900">
+        <div className="pointer-events-none fixed -left-24 top-28 h-64 w-64 rounded-full bg-amber-300/20 blur-3xl" />
+        <div className="pointer-events-none fixed -right-24 top-80 h-64 w-64 rounded-full bg-sky-300/20 blur-3xl" />
         <SiteHeader />
-        <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-6 sm:px-6">
+        <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-8 sm:px-6">
           {children}
         </main>
         <SiteFooter />

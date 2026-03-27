@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export function SiteFooter() {
   return (
-    <footer className="mt-14 border-t border-zinc-200 bg-zinc-950 text-zinc-300">
-      <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-12 sm:grid-cols-2 sm:px-6 lg:grid-cols-4">
+    <footer className="mt-16 border-t border-zinc-800 bg-gradient-to-r from-zinc-950 via-zinc-900 to-zinc-950 text-zinc-300">
+      <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-4">
         <div>
           <h3 className="text-sm font-semibold uppercase tracking-wide text-amber-300">
             Zamora Gems & Jewellery
@@ -79,6 +79,9 @@ export function SiteFooter() {
             Contact Number : +94 77 123 3369
           </p>
         </div>
+      </div>
+      <div className="border-t border-zinc-800 py-4 text-center text-xs text-zinc-400">
+        © {new Date().getFullYear()} Zamora Gems & Jewellery. All rights reserved.
       </div>
     </footer>
   );

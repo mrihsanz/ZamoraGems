@@ -10,7 +10,7 @@ const filters = {
 export default function ShopPage() {
   return (
     <div className="space-y-6">
-      <div>
+      <div className="rounded-3xl border border-zinc-200/80 bg-white/80 p-6 shadow-sm">
         <h1 className="text-3xl font-bold text-zinc-900">Shop Gemstones</h1>
         <p className="mt-2 text-sm text-zinc-600">
           Browse certified gems with advanced filters by type, price, origin,
@@ -19,7 +19,7 @@ export default function ShopPage() {
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[260px_1fr]">
-        <aside className="space-y-6 rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm">
+        <aside className="space-y-6 rounded-3xl border border-zinc-200/80 bg-white/90 p-5 shadow-sm">
           <section>
             <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-700">
               Categories
@@ -78,7 +78,7 @@ export default function ShopPage() {
         </aside>
 
         <div className="space-y-4">
-          <div className="flex flex-wrap items-center justify-between rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between rounded-3xl border border-zinc-200/80 bg-white/90 p-4 shadow-sm">
             <p className="text-sm text-zinc-600">{listings.length} listings found</p>
             <select className="rounded-lg border border-zinc-300 px-3 py-2 text-sm">
               <option>Sort: Ending soon</option>
