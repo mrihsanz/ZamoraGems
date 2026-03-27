@@ -7,6 +7,7 @@ const navLinks = [
   { href: "/auctions", label: "Auctions" },
   { href: "/sellers", label: "Sellers" },
   { href: "/sell", label: "Sell" },
+  { href: "/admin", label: "Admin" },
   { href: "/help", label: "Help" },
 ];
 
